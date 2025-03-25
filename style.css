@@ -1,0 +1,292 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+header {
+    background-color:  #1f1f1f;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 15px 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+nav ul li a:hover {
+    background-color: #007BFF;
+    border-radius: 5px;
+}
+section {
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #007BFF, #000000);
+    height: 100vh;
+    padding: 0 10px;
+}
+.banner h1 {
+    font-size: 3rem;
+}
+.banner p{
+    font-size: 1.2rem;
+}
+.banner a {
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.sobre {
+    background-color: #121212;
+    text-align: center;
+    max-width: 900px;
+    width: 100vw;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+.sobre h2 {
+    font-size: 3rem;
+    color: #007BFF;
+}
+
+.depo {
+    text-align: center;
+    background-color: #007BFF;
+    padding: 30px;
+}
+.depo h2 {
+    font-size: 3rem;
+}
+.depo p {
+    font-style: italic;
+}
+
+.servicos {
+    text-align: center;
+    padding-bottom: 60px;
+}
+.servicos h2 {
+    font-size: 3rem;
+    color: #007BFF;
+}
+.servicos-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    max-width: 800px;
+    width: 100vw;
+    margin: 0 auto;
+}
+.servico-item {
+    background-color: #007BFF;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+.servico-item:hover {
+    transform: translateY(-10px);
+}
+  
+.servico-item h3 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+  
+  .servico-item p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.contato {
+    background-color: #007BFF;
+    text-align: center;
+}
+.contato h2 {
+    font-size: 2rem;
+}
+.contato form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+.contato form input {
+    margin: 5px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    width: 50%;
+}
+.contato form textarea {
+    width: 50%;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+}
+.contato button {
+    background-color: #00c3ff;
+    border-radius: 10px;
+    border: none;
+    padding: 20px 25px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+.contato button:hover {
+    background-color: #fdf5f5;
+}
+
+footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 5px;
+}
+
+@media (max-width: 1024px) {
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+    .banner p {
+        font-size: 1rem;
+    }
+    .servicos-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .servico-item {
+        width: 80%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajusta o header */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    /* Deixa o menu abaixo do h1 e mantém os itens na horizontal */
+    nav {
+        width: 100%;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    nav ul li {
+        margin: 5px;
+    }
+
+    /* Ajusta o tamanho do banner */
+    .banner {
+        padding-top: 120px;
+    }
+    .banner h1 {
+        font-size: 2rem;
+    }
+    .banner p {
+        font-size: 1rem;
+    }
+
+    /* Seções responsivas */
+    .sobre, .servicos, .contato {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Serviços em coluna */
+    .servicos-list {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .servico-item {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Formulário responsivo */
+    .contato form input,
+    .contato form textarea {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Botão de contato ajustado */
+    .contato button {
+        width: 80%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header mais compacto */
+    header {
+        padding: 10px;
+    }
+
+    /* Banner menor */
+    .banner h1 {
+        font-size: 1.8rem;
+    }
+    .banner p {
+        font-size: 0.9rem;
+    }
+
+    /* Seções com menos espaçamento */
+    section {
+        padding: 60px 15px;
+    }
+
+    /* Ajusta o formulário */
+    .contato form input,
+    .contato form textarea {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    /* Footer mais compacto */
+    footer {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+}
